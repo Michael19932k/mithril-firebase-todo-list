@@ -27,7 +27,7 @@ var User = {
             return obj.ToDo !== val;
         })
         sessionStorage.setItem("list", JSON.stringify(newList));
-        console.log(newList)
+        console.log("newList")
         User.list = newList
     }
 }
