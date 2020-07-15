@@ -13,6 +13,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "firebase": "^7.16.0",
     "mithril": "^2.0.4"
   },
   "devDependencies": {

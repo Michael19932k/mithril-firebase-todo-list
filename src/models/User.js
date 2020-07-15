@@ -1,4 +1,5 @@
 import m from "mithril"
+import {db} from "../../FireBase"
 
 
 
@@ -14,15 +15,18 @@ var User = {
     current: { ToDo: "" },
     save: function () {
         User.list.push(User.current)
-        User.current = { ToDo: "" },
-            sessionStorage.setItem("list", JSON.stringify(User.list));
+        // User.current = { ToDo: "" },
+            sessionStorage.setItem("list", JSON.stringify(User.list)),
+            db.collection('listOfToDo').add({
+                toDo: User.current
+              });
     },
 
     valueToDelete: "",
     delete: function (val) {
         console.log(val)
-       let newList = JSON.parse(sessionStorage.getItem("list"))
-       
+        let newList = JSON.parse(sessionStorage.getItem("list"))
+
         newList = newList.filter(function (obj) {
             return obj.ToDo !== val;
         })
