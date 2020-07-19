@@ -4,37 +4,35 @@ import {db} from "../../FireBase"
 
 
 var User = {
-    list: [{ ToDo: "pushups" }, { ToDo: "shopping" }, { ToDo: "study" }],
+    list: [],
     loadList: function () {
-        sessionStorage.setItem("list", JSON.stringify(User.list));
+        db.collection("listOfToDo").onSnapshot(function(querySnapshot) {
+            User.list = []
+        querySnapshot.forEach(function(doc) {
+            User.list.push({...doc.data(),id:doc.id})
+            m.redraw()
+        });
+    });
+        console.log(User.list)
     },
 
-    load: function () {
-
-    },
-    current: { ToDo: "" },
+    current: { toDo: "" },
     save: function () {
-        User.list.push(User.current)
-        // User.current = { ToDo: "" },
-            sessionStorage.setItem("list", JSON.stringify(User.list)),
             db.collection('listOfToDo').add({
-                toDo: User.current
+                toDo: User.current.toDo
               });
+              User.current = { toDo: "" }
     },
 
     valueToDelete: "",
-    delete: function (val) {
-        console.log(val)
-        let newList = JSON.parse(sessionStorage.getItem("list"))
-
-        newList = newList.filter(function (obj) {
-            return obj.ToDo !== val;
-        })
-        sessionStorage.setItem("list", JSON.stringify(newList));
-        console.log(newList)
-        User.list = newList
+    delete: function (id) {
+        db.collection("listOfToDo").doc(id).delete().then(function() {
+            console.log("Document successfully deleted!");
+            m.redraw()
+        }).catch(function(error) {
+            console.error("Error removing document: ", error);
+        });
     }
 }
-
 
 export default User

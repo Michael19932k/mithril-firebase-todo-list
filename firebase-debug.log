@@ -1,0 +1,25 @@
+[debug] [2020-07-19T15:37:07.492Z] ----------------------------------------------------------------------
+[debug] [2020-07-19T15:37:07.494Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Michael\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-07-19T15:37:07.495Z] CLI Version:   8.5.0
+[debug] [2020-07-19T15:37:07.495Z] Platform:      win32
+[debug] [2020-07-19T15:37:07.495Z] Node Version:  v10.16.3
+[debug] [2020-07-19T15:37:07.497Z] Time:          Sun Jul 19 2020 18:37:07 GMT+0300 (Israel Daylight Time)
+[debug] [2020-07-19T15:37:07.497Z] ----------------------------------------------------------------------
+[debug] [2020-07-19T15:37:07.497Z] 
+[debug] [2020-07-19T15:37:07.508Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-07-19T15:37:07.508Z] > authorizing via signed-in user
+[debug] [2020-07-19T15:37:07.508Z] [iam] checking project my-mithril-todo-project for permissions ["firebase.projects.get"]
+[debug] [2020-07-19T15:37:07.512Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/my-mithril-todo-project:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2020-07-19T15:37:08.714Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 19 Jul 2020 15:37:08 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=673","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-07-19T15:37:08.715Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-mithril-todo-project  
+ 
+[debug] [2020-07-19T15:37:09.363Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 19 Jul 2020 15:37:09 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Serving from 'C:\Users\Michael\Desktop\Mithril V2'...
+[info] 
+[debug] [2020-07-19T15:37:09.367Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/my-mithril-todo-project/webApps/-/config  
+ 
+[debug] [2020-07-19T15:37:10.316Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 19 Jul 2020 15:37:10 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting: Serving hosting files from: ./build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1m./build\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}

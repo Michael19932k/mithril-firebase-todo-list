@@ -19,8 +19,8 @@ function AddToDo() {
                 m("label.label", "Add ToDo"),
                 m("input.input[type=text]", {
                     required: true,
-                    oninput: function (e) { User.current.ToDo = e.target.value },
-                    value: User.current.ToDo
+                    oninput: function (e) { User.current.toDo = e.target.value },
+                    value: User.current.toDo
                 }),
                 m("button.button[type=submit]", "Add"),
 
